@@ -46,7 +46,7 @@ $(function () {
      * 修复样式.
      */
     let fixStyles = function () {
-        fixPostCardWidth('navContainer');
+        fixPostCardWidth('navContainer', 'articles');
         fixPostCardWidth('artDetail', 'prenext-posts');
         fixFooterPosition();
     };
@@ -138,10 +138,10 @@ $(function () {
             $backTop.slideDown(300);
         }
     });
-    	
-	$(".nav-menu>li").hover(function(){
-		$(this).children('ul').stop(true,true).show();
-		 $(this).addClass('nav-show').siblings('li').removeClass('nav-show');
+    /*支持二级菜单*/
+    $(".nav-menu>li").hover(function(){
+	$(this).children('ul').stop(true,true).show();
+	$(this).addClass('nav-show').siblings('li').removeClass('nav-show');
 		
 	},function(){
 		$(this).children('ul').stop(true,true).hide();
